@@ -135,8 +135,9 @@ class Agile extends Component {
       return <Redirect to={`/card:${this.state.cardId}`}/>
     }
     let editable = !!localStorage.getItem('token');
+    let  draggable = !!localStorage.getItem('token');
     return (
-        <Board data={this.load_board_data()} draggable editable={editable}
+        <Board data={this.load_board_data()} draggable={draggable} editable={editable}
                onCardClick={this.cardClick}
                onCardAdd={this.cardAdd}
                onCardDelete={this.cardDelete}
