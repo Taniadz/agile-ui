@@ -42,21 +42,7 @@ class Agile extends Component {
       clicked: true,
     });
   };
-  cardAdd = (card, laneId) => {
-    axios({
-      method: 'POST',
-      url: API + "cards/",
-      headers: {
-        "Authorization": 'JWT ' + localStorage.getItem('token'),
-      },
-      data: {
-        title: card.title,
-        description: card.description,
-        status: laneId,
-        author_id: localStorage.getItem('user_id'),
-      },
-    });
-  };
+
   cardDelete = (card, laneId) => {
     let url = API + "cards/" + card + "/";
     axios({
@@ -84,7 +70,6 @@ class Agile extends Component {
     });
     console.log(cardId, targetLaneId)
   };
-
 
 
   load_board_data = () => {
@@ -129,20 +114,37 @@ class Agile extends Component {
       ]
     };
   };
+  cardAdd = (card, laneId) => {
+    axios({
+      method: 'POST',
+      url: API + "cards/",
+      headers: {
+        "Authorization": 'JWT ' + localStorage.getItem('token'),
+      },
+      data: {
+        title: card.title,
+        description: card.description,
+        status: laneId,
+        author_id: localStorage.getItem('user_id'),
+      },
+    });
+    this.props.LOAD_CARDS();
+    this.load_board_data()
+  };
 
   render() {
     if (this.state.clicked) {
       return <Redirect to={`/card:${this.state.cardId}`}/>
     }
     let editable = !!localStorage.getItem('token');
-    let  draggable = !!localStorage.getItem('token');
+    let draggable = !!localStorage.getItem('token');
     return (
         <Board data={this.load_board_data()} draggable={draggable} editable={editable}
                onCardClick={this.cardClick}
                onCardAdd={this.cardAdd}
                onCardDelete={this.cardDelete}
                handleDragEnd={this.cardDragged}
-               />
+        />
     )
   }
 
