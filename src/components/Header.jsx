@@ -1,53 +1,52 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
 import {connect} from "react-redux";
 
-import { LOGOUT_USER} from '../actions/logout';
-import { bindActionCreators } from 'redux';
+import {LOGOUT_USER} from '../actions/logout';
+import {bindActionCreators} from 'redux';
 import {Link} from "react-router-dom";
 
-function mapStateToProps({ auth}, props) {
+function mapStateToProps({auth}, props) {
   return {
     ...props,
     auth,
   };
 }
+
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
-    {
-      LOGOUT_USER,
-    },
-    dispatch,
+      {
+        LOGOUT_USER,
+      },
+      dispatch,
   );
 }
 
-
 const Header = styled(
-  class extends Component {
-    render() {
-      return (
-        <ul className={this.props.className}>
-          {localStorage.getItem('user_name') &&
+    class extends Component {
+      render() {
+        return (
+            <ul className={this.props.className}>
+              {localStorage.getItem('user_name') &&
               <div>
                 <li className="colomn"><span onClick={this.props.LOGOUT_USER}>logout</span></li>
-          <li className="colomn"><span>{localStorage.getItem('user_name')}</span></li>
+                <li className="colomn"><span>{localStorage.getItem('user_name')}</span></li>
               </div>
-          }
-          {!localStorage.getItem('user_name') &&
+              }
+              {!localStorage.getItem('user_name') &&
               <div>
-                              <Link to='/login'>
-                <li className="colomn"><span>login</span></li>
-                              </Link>
-                              <Link to='/register'>
-
-          <li className="colomn"><span>register</span></li>
-                              </Link>
+                <Link to='/login'>
+                  <li className="colomn"><span>login</span></li>
+                </Link>
+                <Link to='/register'>
+                  <li className="colomn"><span>register</span></li>
+                </Link>
               </div>
-          }
-        </ul>
-      );
-    }
-  },
+              }
+            </ul>
+        );
+      }
+    },
 )`
       {
   list-style-type: none;
