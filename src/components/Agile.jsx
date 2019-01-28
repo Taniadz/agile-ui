@@ -43,7 +43,6 @@ class Agile extends Component {
     });
   };
   cardAdd = (card, laneId) => {
-
     axios({
       method: 'POST',
       url: API + "cards/",
@@ -62,6 +61,9 @@ class Agile extends Component {
     let url = API + "cards/" + card + "/";
     axios({
       method: 'PATCH',
+      headers: {
+        "Authorization": 'JWT ' + localStorage.getItem('token'),
+      },
       url: url,
       data: {
         is_deleted: "True",
@@ -72,6 +74,9 @@ class Agile extends Component {
     let url = API + "cards/" + cardId + "/";
     axios({
       method: 'PATCH',
+      headers: {
+        "Authorization": 'JWT ' + localStorage.getItem('token'),
+      },
       url: url,
       data: {
         status: targetLaneId,
@@ -79,6 +84,8 @@ class Agile extends Component {
     });
     console.log(cardId, targetLaneId)
   };
+
+
 
   load_board_data = () => {
     let todoList = [];
@@ -133,7 +140,8 @@ class Agile extends Component {
                onCardClick={this.cardClick}
                onCardAdd={this.cardAdd}
                onCardDelete={this.cardDelete}
-               handleDragEnd={this.cardDragged}/>
+               handleDragEnd={this.cardDragged}
+               />
     )
   }
 

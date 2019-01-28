@@ -1,34 +1,36 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     background-color: #3179ba;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.Card .container{
+.Card .container {
     width: 960px;
     margin: auto;
     margin-top: 40px;
     background-color: #ebeef0;
     color: #17394d;
     padding: 15px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 
-  }
-.container-flex{
+}
+
+.container-flex {
     display: flex;
     flex-wrap: wrap;
 }
+
 h1 {
     text-align: center;
     font-size: 3em;
@@ -37,55 +39,63 @@ h1 {
     margin: 0;
     padding: 20px;
 }
+
 h2 {
     color: #445566;
     font-size: 20px;
     line-height: 24px;
     margin: 0 0 8px;
 }
-.Card form{
+
+.Card form {
     width: 100%;
 }
-.Card .leftbar input {
+
+.Card .leftbar input, .Card .leftbar textarea {
     width: 100%;
     text-align: center;
     border: 1px solid #909296;
     outline: none;
     padding: 20px 0 12px 0;
     font-size: 20px;
-  display: inline-block;
-  box-sizing: inherit;
-  margin: 0;
+    display: inline-block;
+    box-sizing: inherit;
+    margin: 0;
 
-  line-height: inherit;
-  vertical-align: inherit;
-  color: inherit;
+    line-height: inherit;
+    vertical-align: inherit;
+    color: inherit;
     background-color: white;
 
 }
-.cursor{
+
+.cursor {
     cursor: pointer;
 }
-.leftbar input[disabled] {
-  border: 0;
-      background: none;
-      border-left: 0;
+
+.leftbar input[disabled], .leftbar textarea[disabled] {
+    border: 0;
+    background: none;
+    border-left: 0;
     border-right: 0;
 
 
 }
-.sc-kpOJdX.ejXrMv{
+
+.sc-kpOJdX.ejXrMv {
     opacity: 1;
     overflow: visible;
     background-color: #f9f9f9;
     border: none;
     right: 35px;
 }
-.sc-kpOJdX.ejXrMv:hover{
+
+.sc-kpOJdX.ejXrMv:hover {
     background-color: #f3f3f3;
     color: red;
 }
-.sc-kpOJdX.ejXrMv:before{
+
+.sc-kpOJdX.ejXrMv:before {
     content: "delete";
     transform: none;
     font-size: 12px;
@@ -93,99 +103,115 @@ h2 {
     width: 1px;
 }
 
- .sc-kpOJdX.ejXrMv:after{
+.sc-kpOJdX.ejXrMv:after {
     display: none;
 
 }
 
-.Card .leftbar{
+.Card .leftbar {
     /*display: flex;*/
     width: 60%;
     padding: 10px;
 
 }
-.agile-card a{
-text-decoration: none;
+
+.agile-card a {
+    text-decoration: none;
 
 }
-.Card .rightbar{
+
+.Card .rightbar {
     width: 37%;
 
 }
 
-.leftbar h2{
+.leftbar h2 {
     margin-right: 4px;
 }
-a.edit{
+
+a.edit {
 
     justify-content: center;
     padding: 7px 0;
     margin: 0 auto;
     cursor: pointer;
-color: #6b808c;
+    color: #6b808c;
     text-decoration: underline;
     margin-left: 5px;
 }
-.rightbar h2{
+
+.rightbar h2 {
     margin-right: 4px;
     margin-top: 7px;
     margin-bottom: 3px;
 }
-.card-title{
-        border-bottom: 4px solid #f9fbff;
+
+.card-title {
+    border-bottom: 4px solid #f9fbff;
 
 }
-.card-title h2, .card-description h2{
+
+.card-title h2, .card-description h2 {
     font-weight: 500;
 }
-.card-title input{
+
+.card-title input {
     font-weight: 600;
     font-size: 22px;
 }
-button.submit{
+
+button.submit {
     background-color: #5aac44;
     box-shadow: 0 1px 0 0 #3f6f21;
     border: none;
     color: #fff;
-        padding: 5px;
-        font-size: 18px;
+    padding: 5px;
+    font-size: 18px;
     line-height: 20px;
     font-weight: 600;
     margin: 5px;
     visibility: visible;
 
 }
-.react-trello-card.sc-dnqmqq.eoPYBZ{
+
+.react-trello-card.sc-dnqmqq.eoPYBZ {
     min-width: 300px;
 }
-button.submit[disabled]{
+
+button.submit[disabled] {
     visibility: hidden;
 }
 
-.card-description{
+.card-description {
 
     padding-top: 10px;
 }
-.select-row, .subscribe-row{
+
+.select-row, .subscribe-row {
     display: flex;
 }
-.select, .subscribe{
+
+.select, .subscribe {
     width: 80%;
 }
-.boad-back{
+
+.boad-back {
     text-align: center;
     color: white;
     cursor: pointer;
 }
-.boad-back svg{
+
+.boad-back svg {
     cursor: pointer;
 }
-.date span{
+
+.date span {
     font-size: 16px;
     font-weight: 400;
 }
+
 /*.datetime-picker{*/
-    /*width: 100%;*/
+/*width: 100%;*/
 
 /*}*/
 
@@ -194,59 +220,63 @@ button.submit[disabled]{
     width: 80%;
     display: inline-block;
     background-color: white;
-    background-color: hsl(0,0%,100%);
-    border-color: hsl(0,0%,80%);
+    background-color: hsl(0, 0%, 100%);
+    border-color: hsl(0, 0%, 80%);
     border-radius: 4px;
     border-style: solid;
     border-width: 1px;
     min-height: 38px;
 
 }
+
 .datetime-picker .react-datetime-picker .react-datetime-picker__wrapper {
     border: none;
 }
-.circle-box-status{
+
+.circle-box-status {
     margin-left: 10px;
     display: none;
 }
-.circle-box-status.display{
-display: inline-block
+
+.circle-box-status.display {
+    display: inline-block
 }
 
 .circle-loader {
-  margin-bottom: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-left-color: green;
-  animation: loader-spin 1.2s infinite linear;
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
+    margin-bottom: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-left-color: green;
+    animation: loader-spin 1.2s infinite linear;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
 }
 
 .load-complete {
-  -webkit-animation: none;
-  animation: none;
-  border-color: green;
+    -webkit-animation: none;
+    animation: none;
+    border-color: green;
 }
 
 .checkmark {
     display: none;
 }
-.checkmark.show{
+
+.checkmark.show {
     display: inline-block;
 }
 
-  .checkmark.draw:after {
+.checkmark.draw:after {
     animation-duration: 800ms;
     animation-timing-function: ease;
     animation-name: checkmark;
     transform: scaleX(-1) rotate(135deg);
-  }
+}
 
-  .checkmark:after {
+.checkmark:after {
     opacity: 1;
     height: 20px;
     width: 10px;
@@ -257,47 +287,47 @@ display: inline-block
     left: 9px;
     top: 20px;
     position: absolute;
-  }
+}
 
 
 @keyframes loader-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes checkmark {
-  0% {
-    height: 0;
-    width: 0;
-    opacity: 1;
-  }
-  20% {
-    height: 0;
-    width: 10px;
-    opacity: 1;
-  }
-  40% {
-    height: 20px;
-    width: 10px;
-    opacity: 1;
-  }
-  100% {
-    height: 20px;
-    width: 10px;
-    opacity: 1;
-  }
+    0% {
+        height: 0;
+        width: 0;
+        opacity: 1;
+    }
+    20% {
+        height: 0;
+        width: 10px;
+        opacity: 1;
+    }
+    40% {
+        height: 20px;
+        width: 10px;
+        opacity: 1;
+    }
+    100% {
+        height: 20px;
+        width: 10px;
+        opacity: 1;
+    }
 }
 
-.Login, .Register{
+.Login, .Register {
     font-size: 18px;
     color: white;
 }
 
-article.jHtXmx{
+article.jHtXmx {
     min-width: 300px;
     max-width: 300px;
 }
